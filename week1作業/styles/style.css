@@ -1,0 +1,536 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+header h3 {
+  font-size: 20px;
+  font-weight: normal;
+}
+header nav {
+  flex: 5 1 500px;
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  padding-bottom: 0%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+header nav ul li {
+  font-size: 20px;
+  top: 0px;
+  right: 0px;
+}
+
+main section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  background-color: lightblue;
+}
+main section h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+/* requirement 1 */
+@media (min-width: 1200px) and (max-width: 1920px) {
+  /* promotion設定 */
+
+  main box.container1 {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    position: absolute;
+    align-items: center;
+    padding-top: 1rem;
+    justify-content: center;
+    margin: 0 auto; /* 水平置中 */
+  }
+
+  /* 推廣區 */
+
+  .promotion {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr; /* 使用百分比来定义网格列的宽度 */
+    grid-template-rows: 50%;
+    gap: 20px;
+    grid-template-areas: "first0 first01 first01  first02 first02";
+    max-width: 1195px; /* 符合promtotion */
+    width: 100%; /* 設置寬度為100% */
+    margin: 20px auto; /* 水平置中 */
+  }
+
+  .first0 {
+    grid-area: first0;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+
+  .first01 {
+    grid-area: first01;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+
+  .first02 {
+    grid-area: first02;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+
+  .promotion img {
+    width: 80px; /* 每张图片的宽度占据父容器的100% */
+    height: 50px;
+  }
+
+  .subtitle {
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: calc(100% - 80px);
+    height: 50px;
+    background-color: lightblue;
+    display: flex; /* 将 .subtitle 设置为 Flex 容器 */
+    align-items: center; /* 垂直居中 */
+    text-align: center; /* 让文本水平居中 */
+  }
+
+  .subtitle p {
+    margin: 0; /* 去除段落标签的默认外边距 */
+    margin-left: 20px; /* 设置文本距左边的距离 */
+    text-align: left; /* 左对齐 */
+  }
+
+  /* 照片區 */
+  .pic {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr; /* 使用百分比来定义网格列的宽度 */
+    grid-template-rows: 20% 20%;
+    gap: 20px;
+    grid-template-areas:
+      "first1 first2 first3 first4 first5"
+      "first6 first7 first8 first9 first10";
+    max-width: 1195px; /* 符合promtotion */
+    margin: 10 auto; /* 将元素水平置中 */
+    width: 100%; /* 設置寬度為100% */
+    margin: 0 auto; /* 水平置中 */
+  }
+
+  .pic img {
+    width: 100%; /* 每张图片的宽度占据父容器的100% */
+    height: 100%;
+  }
+
+  .first1 {
+    grid-area: first1;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first2 {
+    grid-area: first2;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first3 {
+    grid-area: first3;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first4 {
+    grid-area: first4;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first5 {
+    grid-area: first5;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first6 {
+    grid-area: first6;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first7 {
+    grid-area: first7;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first8 {
+    grid-area: first8;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first9 {
+    grid-area: first9;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first10 {
+    grid-area: first10;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+
+  .title-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(173, 216, 230, 0.5);
+    text-align: center;
+  }
+
+  .star {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    color: gold; /* 調整星星的顏色 */
+  }
+}
+
+/* requirement 2 */
+@media (min-width: 600px) and (max-width: 1200px) {
+  /* promotion設定 */
+
+  main box.container1 {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    position: absolute;
+    align-items: center;
+    padding-top: 1rem;
+    justify-content: center;
+    margin: 0 auto; /* 水平置中 */
+  }
+
+  /* 推廣區 */
+
+  .promotion {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 使用百分比来定义网格列的宽度 */
+    grid-template-rows: 50% 50%;
+    gap: 20px;
+    grid-template-areas:
+      "first0 first01 "
+      "first02 first02";
+    max-width: 1195px; /* 符合promtotion */
+    width: 100%; /* 設置寬度為100% */
+    margin: 20px auto; /* 水平置中 */
+  }
+
+  .first0 {
+    grid-area: first0;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+
+  .first01 {
+    grid-area: first01;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+
+  .first02 {
+    grid-area: first02;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+
+  .promotion img {
+    width: 80px; /* 每张图片的宽度占据父容器的100% */
+    height: 50px;
+  }
+
+  .subtitle {
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: calc(100% - 80px);
+    height: 50px;
+    background-color: lightblue;
+    display: flex; /* 将 .subtitle 设置为 Flex 容器 */
+    align-items: center; /* 垂直居中 */
+    text-align: center; /* 让文本水平居中 */
+  }
+
+  .subtitle p {
+    margin: 0; /* 去除段落标签的默认外边距 */
+    margin-left: 20px; /* 设置文本距左边的距离 */
+    text-align: left; /* 左对齐 */
+  }
+
+  /* 照片區 */
+  .pic {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 使用百分比来定义网格列的宽度 */
+    grid-template-rows: 20% 20% 20%;
+    gap: 20px;
+    grid-template-areas:
+      "first1 first2 first3 first4"
+      "first5 first6 first7 first8"
+      "first9 first9 first10 first10";
+    max-width: 1195px; /* 符合promtotion */
+    margin: 10 auto; /* 将元素水平置中 */
+    width: 100%; /* 設置寬度為100% */
+    margin: 0 auto; /* 水平置中 */
+  }
+
+  .pic img {
+    width: 100%; /* 每张图片的宽度占据父容器的100% */
+    height: 100%;
+  }
+
+  .first1 {
+    grid-area: first1;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first2 {
+    grid-area: first2;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first3 {
+    grid-area: first3;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first4 {
+    grid-area: first4;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first5 {
+    grid-area: first5;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first6 {
+    grid-area: first6;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first7 {
+    grid-area: first7;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first8 {
+    grid-area: first8;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first9 {
+    grid-area: first9;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first10 {
+    grid-area: first10;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+
+  .title-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: lightblue;
+    text-align: center;
+  }
+
+  .star {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    color: gold; /* 調整星星的顏色 */
+  }
+}
+
+/* requirement 3 */
+@media (min-width: 360px) and (max-width: 600px) {
+  /* 漢堡選單區 */
+  header nav {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%; /* 将菜单项放置在汉堡菜单下方 */
+    right: 0;
+    background-color: white; /* 背景颜色可根据需要调整 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+    transition: max-height 0.3s ease; /* 添加过渡效果 */
+    max-height: 0; /* 菜单项默认高度为0，隐藏起来 */
+    overflow: hidden; /* 超出部分隐藏 */
+  }
+
+  /* 根据复选框的状态来展开或收起菜单项 */
+  #menu-toggle:checked + label + ul {
+    max-height: 200px; /* 展开时的高度，根据需要调整 */
+  }
+
+  header nav ul li {
+    font-size: 20px;
+    display: block; /* 设置菜单项为块级元素，每个项独占一行 */
+    margin-bottom: 10px; /* 调整菜单项之间的垂直间距 */
+    padding: 10px; /* 添加内边距 */
+  }
+
+  /* promotion設定 */
+
+  main box.container1 {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    position: absolute;
+    align-items: center;
+    padding-top: 1rem;
+    justify-content: center;
+    margin: 0 auto; /* 水平置中 */
+  }
+
+  /* 推廣區 */
+
+  .promotion {
+    display: grid;
+    grid-template-columns: 1fr; /* 使用百分比来定义网格列的宽度 */
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-template-areas:
+      "first0"
+      "first01"
+      "first02";
+    max-width: 1195px; /* 符合promtotion */
+    width: 90%; /* 設置寬度為100% */
+    margin: 20px auto; /* 水平置中 */
+  }
+
+  .first0 {
+    grid-area: first0;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+
+  .first01 {
+    grid-area: first01;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+
+  .first02 {
+    grid-area: first02;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+
+  .promotion img {
+    width: 80px; /* 每张图片的宽度占据父容器的100% */
+    height: 50px;
+  }
+
+  .subtitle {
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: calc(100% - 80px);
+    height: 50px;
+    background-color: lightblue;
+    display: flex; /* 将 .subtitle 设置为 Flex 容器 */
+    align-items: center; /* 垂直居中 */
+    text-align: center; /* 让文本水平居中 */
+  }
+
+  .subtitle p {
+    margin: 0; /* 去除段落标签的默认外边距 */
+    margin-left: 20px; /* 设置文本距左边的距离 */
+    text-align: left; /* 左对齐 */
+  }
+
+  /* 照片區 */
+  .pic {
+    display: grid;
+    grid-template-columns: 1fr; /* 使用百分比来定义网格列的宽度 */
+    grid-template-rows: repeat(10, 1fr);
+    gap: 20px;
+    grid-template-areas:
+      "first1"
+      "first2"
+      "first3"
+      "first4"
+      "first5"
+      "first6"
+      "first7"
+      "first8"
+      "first9"
+      "first10";
+    max-width: 1195px; /* 符合promtotion */
+    margin: 10 auto; /* 将元素水平置中 */
+    width: 90%; /* 設置寬度為100% */
+    margin: 0 auto; /* 水平置中 */
+  }
+
+  .pic img {
+    width: 100%; /* 每张图片的宽度占据父容器的100% */
+    height: 100%;
+  }
+
+  .first1 {
+    grid-area: first1;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first2 {
+    grid-area: first2;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first3 {
+    grid-area: first3;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first4 {
+    grid-area: first4;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first5 {
+    grid-area: first5;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first6 {
+    grid-area: first6;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first7 {
+    grid-area: first7;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first8 {
+    grid-area: first8;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first9 {
+    grid-area: first9;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+  .first10 {
+    grid-area: first10;
+    position: relative; /* 設置父元素為相對定位 */
+  }
+
+  .title-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: lightblue;
+    text-align: center;
+  }
+
+  .star {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    color: gold; /* 調整星星的顏色 */
+  }
+}
